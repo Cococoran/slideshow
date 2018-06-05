@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>轮播图</title>
+    <script src='ran.js'></script>
+    <style>
+        .ran-slide {
+            width: 600px;
+            position: relative;
+        }
+        .ran-slide-image {
+            display: none;
+            height: 800px;
+            width: 600px;
+        }
+        .ran-active {
+            display: inline-block;
+        }
+        .ran-slide-button {
+            position: absolute;
+            height: 40px;
+            background: black;
+            color: white;
+            opacity: 0.3;
+            cursor: pointer;
+            outline: none;
+        }
+        .ran-slide-button.ran-left {
+            left: 0;
+        }
+        .ran-slide-button.ran-right {
+            right: 0;
+        }
+        .ran-vertical-center {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .ran-slide-indicators {
+            position: relative;
+            bottom: 50px;
+            transform: translateX(-10%);
+            left: 50%; 
+        }
+        .ran-slide-indi {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: red;
+        }
+        .ran-white {
+            background: white;
+        }        
+    </style>
+</head>
+<body>
+    <div class = "ran-slideshow">
+        <div class="ran-slide" data-imgs="6" data-active="0">
+            <img id="id-ranimage-0" class="ran-slide-image ran-active" src="file:///Users/caosiran/Desktop/demo/slideshow/img/1.jpg" alt="">
+            <img id="id-ranimage-1" class="ran-slide-image" src="file:///Users/caosiran/Desktop/demo/slideshow/img/2.jpg" alt="">
+            <img id="id-ranimage-2" class="ran-slide-image" src="file:///Users/caosiran/Desktop/demo/slideshow/img/3.jpg" alt="">
+            <img id="id-ranimage-3" class="ran-slide-image" src="file:///Users/caosiran/Desktop/demo/slideshow/img/4.jpg" alt="">
+            <img id="id-ranimage-4" class="ran-slide-image" src="file:///Users/caosiran/Desktop/demo/slideshow/img/5.jpg" alt="">
+            <img id="id-ranimage-5" class="ran-slide-image" src="file:///Users/caosiran/Desktop/demo/slideshow/img/6.jpg" alt="">    
+            <button class="ran-slide-button ran-left ran-vertical-center" 
+                    data-offset='-1'>&lt;</button>
+            <button class="ran-slide-button ran-right ran-vertical-center"
+                    data-offset="1">&gt;</button>
+            <div class="ran-slide-indicators">
+                <div id="id-indi-0" class="ran-slide-indi ran-white"
+                    data-index='0'></div>
+                <div id="id-indi-1" class="ran-slide-indi"
+                    data-index='1'></div>
+                <div id="id-indi-2" class="ran-slide-indi"
+                    data-index='2'></div>
+                <div id="id-indi-3" class="ran-slide-indi"
+                    data-index='3'></div>
+                <div id="id-indi-4" class="ran-slide-indi"
+                    data-index='4'></div>
+                <div id="id-indi-5" class="ran-slide-indi"
+                    data-index='5'></div>
+            </div>          
+        </div>
+    </div>
+    <script src='slideshow.js'></script>
+</body>
+</html>
+
+    
+
+
+
+
+
